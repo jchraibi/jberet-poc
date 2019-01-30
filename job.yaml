@@ -1,0 +1,43 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  creationTimestamp: 2019-01-30T21:06:37Z
+  labels:
+    run: jberet-batch
+  name: jberet-batch
+  namespace: jberet
+  resourceVersion: "4893481"
+  selfLink: /apis/batch/v1/namespaces/jberet/jobs/jberet-batch
+  uid: eeba8763-24d2-11e9-b3d7-000c29ff846b
+spec:
+  backoffLimit: 6
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      controller-uid: eeba8763-24d2-11e9-b3d7-000c29ff846b
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        controller-uid: eeba8763-24d2-11e9-b3d7-000c29ff846b
+        job-name: jberet-batch
+        run: jberet-batch
+    spec:
+      containers:
+      - command:
+        - /tmp/src/run.sh
+        image: jberet-poc:latest
+        imagePullPolicy: Always
+        name: jberet-batch
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  active: 1
+  startTime: 2019-01-30T21:06:38Z
