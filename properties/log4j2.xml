@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+	<Properties>
+		<!-- Renseigner le nom du fichier de log souhaité -->
+		<Property name="BATCH_FILE_NAME">mybatch-batch</Property>
+		<!-- Renseigner le nom du répertoire de log souhaité -->
+		<Property name="BATCH_NAME">mybatch</Property>
+		<Property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level	%logger{36} - %msg%n</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${PATTERN}" />
+		</Console>
+
+		<RollingFile name="RollingFile"
+			fileName="${sys:batch.log.file.path}/${BATCH_NAME}/${BATCH_FILE_NAME}_latest.log"
+			filePattern="${sys:batch.log.file.path}/${BATCH_NAME}/${BATCH_FILE_NAME}.%d{yyyy-MM-dd-HH-mm}%i.log.zip"
+			ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>${PATTERN}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<!-- La politique de purge est à définir avec l'équipe d'exploitation -->
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="fr.bdf.myappli" level="debug" additivity="false">
+			<appender-ref ref="RollingFile" level="debug"/>
+			<AppenderRef ref="Console" level="debug" />
+		</Logger>
+
+		<Root level="error">
+			<AppenderRef ref="RollingFile" />
+		</Root>
+	</Loggers>
+</Configuration>

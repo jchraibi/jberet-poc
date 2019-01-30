@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "started custom run"
+
+echo "ended custom run"

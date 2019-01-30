@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "started custom assemble"
+
+echo "end custom assemble"

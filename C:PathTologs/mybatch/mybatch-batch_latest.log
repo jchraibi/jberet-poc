@@ -1,0 +1,19 @@
+2019-01-29 22:11:22 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Début du lancement du batch
+2019-01-29 22:11:22 [main] DEBUG	fr.bdf.myappli.commun.launcher.BatchLauncher - properties file : properties/mybatch-job.properties
+2019-01-29 22:11:23 [jberet-1] INFO 	fr.bdf.myappli.example.batchlet.MyBatchlet - Begin Step : fr.bdf.myappli.example.batchlet.MyBatchlet
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Le rapport d'execution des steps est le suivant : 
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Step: stepCreateTable
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Execution Id: 1
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Status: -1
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Start: 2019-01-29T22:11:23.513+0100
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Stop: 2019-01-29T22:11:23.570+0100
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Metrics:
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - COMMIT_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - FILTER_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - PROCESS_SKIP_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - READ_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - READ_SKIP_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - ROLLBACK_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - WRITE_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher -   - WRITE_SKIP_COUNT = 0
+2019-01-29 22:11:23 [main] INFO 	fr.bdf.myappli.commun.launcher.BatchLauncher - Fin du lancement du batch avec le code suivant : -1
